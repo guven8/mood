@@ -25,12 +25,13 @@ export const PATCH = async (request: Request, { params }) => {
     where: {
       entryId: updatedEntry.id,
     },
-    update: analysis,
     create: {
+      userId: user.id,
       entryId: updatedEntry.id,
       // userId: user.id,
       ...analysis,
     },
+    update: analysis,
   })
 
   return NextResponse.json({ data: { ...updatedEntry, analysis: updated } })
