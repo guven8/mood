@@ -9,8 +9,8 @@ const links = [
 
 export default function DashboardLayout({ children }) {
   return (
-    <div className="h-full w-full relative">
-      <aside className="absolute top-0 left-0 h-full border-r border-black/10 w-[200px]">
+    <div className="relative h-full w-full">
+      <aside className="absolute left-0 top-0 h-full w-[200px] border-r border-black/10">
         <div>Mood</div>
         <ul>
           {links.map(({ href, label }) => (
@@ -22,7 +22,7 @@ export default function DashboardLayout({ children }) {
       </aside>
       <div className="ml-[200px] h-full">
         <header className="h-[60px] border-b border-black/10">
-          <div className="h-full w-full px-6 flex items-center justify-end">
+          <div className="flex h-full w-full items-center justify-end px-6">
             <UserButton />
           </div>
         </header>

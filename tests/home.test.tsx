@@ -6,7 +6,7 @@ vi.mock('@clerk/nextjs', () => {
   return {
     auth: () =>
       new Promise((resolve) =>
-        resolve({ userId: 'user_2NNEqL2nrIRdJ194ndJqAHwEfxC' })
+        resolve({ userId: 'user_2NNEqL2nrIRdJ194ndJqAHwEfxC' }),
       ),
     ClerkProvider: ({ children }) => <div>{children}</div>,
     useUser: () => ({

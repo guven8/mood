@@ -29,7 +29,7 @@ export default function Editor({ entry }) {
   })
 
   return (
-    <div className="w-full h-full grid grid-cols-3">
+    <div className="grid h-full w-full grid-cols-3">
       <div className="col-span-2">
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
@@ -37,7 +37,7 @@ export default function Editor({ entry }) {
           </div>
         )}
         <textarea
-          className="w-full h-full p-8 text-xl outline-none"
+          className="h-full w-full p-8 text-xl outline-none"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
@@ -55,7 +55,7 @@ export default function Editor({ entry }) {
           <ul>
             {analysisData.map((item) => (
               <li
-                className="flex items-center justify-between px-2 py-4 border-b border-t border-black/10"
+                className="flex items-center justify-between border-b border-t border-black/10 px-2 py-4"
                 key={item.name}
               >
                 <span className="text-lg font-semibold">{item.name}</span>
